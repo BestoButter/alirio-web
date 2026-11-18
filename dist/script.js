@@ -31,6 +31,8 @@ const objective = document.querySelector("#objetivo");
 const messageBox = document.querySelector("#mensaje-preview");
 const draft = document.querySelector("#borrador");
 const status = document.querySelector("#mensaje-estado");
+const whatsappContact = document.querySelector("#whatsapp-contacto");
+const whatsappMessage = document.querySelector("#whatsapp-mensaje");
 
 const inquiries = {
   gimnasio: "Quisiera información sobre una rutina personalizada para entrenar en gimnasio.",
@@ -45,6 +47,7 @@ function updateDraft() {
 
   const goal = objective.value.trim();
   draft.value = `Hola, Alirio. ${inquiry}${goal ? `\n\nMi objetivo: ${goal}` : ""}\n\n¿Podrías contarme cómo funciona y cuáles son las opciones disponibles?`;
+  whatsappMessage.href = `${whatsappContact.href}?text=${encodeURIComponent(draft.value)}`;
   status.textContent = "";
 }
 
@@ -70,7 +73,7 @@ form.addEventListener("submit", (event) => {
 document.querySelector("#copiar-mensaje").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(draft.value);
-    status.textContent = "Mensaje copiado. Abre Instagram y pégalo en el chat.";
+    status.textContent = "Mensaje copiado. Puedes pegarlo en el chat.";
   } catch {
     draft.focus();
     draft.select();

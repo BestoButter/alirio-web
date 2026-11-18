@@ -166,8 +166,11 @@
         <div>
           <p class="kicker">Contacto</p>
           <h2 id="titulo-consulta">Hablemos de<br>tu objetivo.</h2>
-          <p>Elige el tipo de asesoría que te interesa y prepara tu mensaje para enviarlo por Instagram.</p>
-          <a class="direct-link" href="https://ig.me/m/alirio.trainer" target="_blank" rel="noopener noreferrer">@alirio.trainer en Instagram <span aria-hidden="true">↗</span></a>
+          <p>Escríbeme por WhatsApp o prepara aquí una consulta sobre la asesoría que te interesa.</p>
+          <div class="contact-links">
+            <a class="button button-light" id="whatsapp-contacto" href="https://wa.me/584146724381" target="_blank" rel="noopener noreferrer">WhatsApp · +58 414-6724381 <span aria-hidden="true">↗</span></a>
+            <a class="direct-link" href="https://ig.me/m/alirio.trainer" target="_blank" rel="noopener noreferrer">@alirio.trainer en Instagram <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
         <form class="contact-form" id="mensaje-form" hidden>
           <label for="servicio">¿Qué te interesa?</label>
@@ -182,11 +185,11 @@
           <textarea id="objetivo" name="objetivo" rows="3" maxlength="240" placeholder="Por ejemplo, quiero ganar fuerza y entrenar en casa."></textarea>
           <button class="button button-dark" type="submit">Preparar mensaje <span aria-hidden="true">↗</span></button>
           <div class="message-preview" id="mensaje-preview" hidden>
-            <label for="borrador">Tu mensaje para Instagram</label>
+            <label for="borrador">Tu mensaje para WhatsApp</label>
             <textarea id="borrador" rows="4" readonly></textarea>
             <div class="message-actions">
-              <button class="button button-dark" type="button" id="copiar-mensaje">Copiar mensaje</button>
-              <a class="button button-dark-outline" href="https://ig.me/m/alirio.trainer" target="_blank" rel="noopener noreferrer">Abrir Instagram <span aria-hidden="true">↗</span></a>
+              <a class="button button-dark" id="whatsapp-mensaje" target="_blank" rel="noopener noreferrer">Abrir WhatsApp <span aria-hidden="true">↗</span></a>
+              <button class="button button-dark-outline" type="button" id="copiar-mensaje">Copiar mensaje</button>
             </div>
             <p id="mensaje-estado" role="status"></p>
           </div>
